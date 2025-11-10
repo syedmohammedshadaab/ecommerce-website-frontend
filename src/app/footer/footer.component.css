@@ -1,0 +1,129 @@
+/* 🌰 Footer Container */
+.footer {
+  background: linear-gradient(135deg, var(--coffee), var(--raw-umber));
+  color: var(--text-light);
+  padding: 60px 20px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Glowing overlay effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    var(--chamoisee, rgba(176, 137, 104, 0.3)),
+    transparent
+  );
+  filter: blur(60px);
+  z-index: 0;
+}
+
+/* Layout */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sections */
+.footer-section {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: var(--almond);
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+  color: var(--tan);
+  font-size: 14px;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: var(--almond);
+  margin-right: 15px;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--dun);
+  transform: scale(1.2);
+}
+
+/* Links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--tan);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--almond);
+  transform: translateX(4px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid var(--chamoisee);
+  font-size: 13px;
+  color: var(--tan);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom strong {
+  color: var(--almond);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

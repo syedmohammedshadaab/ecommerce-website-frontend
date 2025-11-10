@@ -1,0 +1,249 @@
+/* 🌿 Cart Container */
+.container.mt-5 {
+  margin-top: 100px; /* adjust for fixed navbar */
+}
+
+/* 🛒 Cart Header */
+h2.text-center {
+  color: var(--coffee);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+/* 💌 Empty Cart Message */
+div.text-center.mt-5 {
+  color: var(--coffee);
+}
+
+div.text-center.mt-5 img {
+  width: 120px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+div.text-center.mt-5 img:hover {
+  transform: scale(1.05);
+}
+
+/* 🛍 Continue Shopping Button */
+a.btn.btn-primary {
+  background: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--coffee);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(176, 137, 104, 0.3);
+}
+
+a.btn.btn-primary:hover {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  color: var(--raw-umber);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(127, 85, 57, 0.35);
+}
+
+/* 🏷 Cart Item Card - same as perfume cards */
+.card.shadow-sm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 1rem;
+  border: none;
+  overflow: hidden;
+  background: var(--almond);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌄 Card Image - same as perfume page */
+.card-img-top {
+  width: 100%;
+  height: 500px; /* same as .perfume-img */
+  object-fit: cover;
+  border-bottom: 2px solid var(--tan);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* 📝 Card Text */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.card-body h5 {
+  font-weight: 600;
+  color: var(--coffee);
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: var(--raw-umber);
+  margin-bottom: 10px;
+}
+
+.card-body .text-secondary {
+  color: var(--coffee);
+}
+
+/* 🌿 Themed price text - same as perfume page */
+.text-success,
+.text-theme-price {
+  font-weight: 700;
+  color: var(--chamoisee);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.text-theme-price:hover {
+  transform: scale(1.05);
+  color: var(--coffee);
+}
+
+/* ➕ Quantity Buttons */
+.btn-outline-secondary {
+  border-radius: 0.5rem;
+  border-color: var(--tan);
+  color: var(--coffee);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background: var(--almond);
+  color: var(--chamoisee);
+  border-color: var(--chamoisee);
+  transform: scale(1.05);
+}
+
+/* 🗑 Remove Button */
+.btn-outline-danger {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background: var(--chamoisee);
+  color: var(--almond);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(176, 137, 104, 0.3);
+}
+
+/* 🟢 Checkout Button */
+.btn.btn-success {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  color: var(--coffee);
+  border: none;
+  border-radius: 1rem;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(176, 137, 104, 0.3);
+}
+
+.btn.btn-success:hover {
+  background: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--raw-umber);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(127, 85, 57, 0.35);
+}
+
+/* 💌 Toast Notification */
+.toast.show {
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(176, 137, 104, 0.3);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .card.shadow-sm {
+    min-width: 100%;
+  }
+
+  .card-img-top {
+    height: 350px; /* responsive height same as perfume page */
+  }
+
+  .btn.btn-success {
+    width: 100%;
+  }
+}
+/* Gradient Text Theme - same as perfume page */
+.text-gradient {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: var(--text-light);
+  font-weight: 500;
+  background-color: var(--chamoisee);
+  box-shadow: 0 4px 12px rgba(176, 137, 104, 0.3);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.toast-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-container.success {
+  background-color: var(--chamoisee);
+}
+
+.toast-container.error {
+  background-color: #dc3545;
+}
+
+/* 🩷 Themed Confirmation Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,82 @@
+<div class="container mt-5">
+  <div class="signup-card shadow-sm">
+    <h3 class="text-gradient mb-4">Create Account</h3>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <!-- Mobile -->
+      <div class="mb-3">
+        <label class="form-label">Mobile Number</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="mobile"
+          placeholder="Enter 10-digit mobile number"
+        />
+      </div>
+
+      <!-- Address -->
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea
+          class="form-control"
+          formControlName="address"
+          rows="2"
+          placeholder="Enter your address"
+        ></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button class="btn btn-gradient w-100" [disabled]="loading">
+          {{ loading ? "Registering..." : "Sign Up" }}
+        </button>
+      </div>
+    </form>
+
+    <!-- Error / Success Messages -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success mt-3 text-center">
+      {{ successMessage }}
+    </div>
+
+    <p class="text-center mt-3 subtitle">
+      Already have an account?
+      <a routerLink="/login" class="text-gradient-hover fw-semibold">Login</a>
+    </p>
+  </div>
+</div>

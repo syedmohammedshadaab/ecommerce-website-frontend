@@ -1,0 +1,176 @@
+/* 🌿 Elegant Navbar Container */
+.perfume-navbar {
+  background: rgba(237, 224, 212, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid var(--chamoisee);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 15px 15px;
+  padding: 10px 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 🌿 Navbar links */
+.perfume-navbar .nav-link {
+  position: relative;
+  color: var(--coffee);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Underline hover effect (animated) */
+.perfume-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: var(--chamoisee);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.perfume-navbar .nav-link:hover {
+  color: var(--chamoisee); /* keep text fully visible */
+  background: rgba(176, 137, 104, 0.08); /* subtle hover bg only */
+}
+
+.perfume-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* 🌸 Gradient brand text (only brand/logo) */
+.text-gradient {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.4s ease;
+  margin-right: 1rem;
+}
+
+/* 🌿 Special hover gradient (optional) */
+.text-gradient-hover:hover {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* 🌟 Gradient buttons */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--coffee);
+  border: none;
+  border-radius: 1rem;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(176, 137, 104, 0.3);
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  color: var(--raw-umber);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(127, 85, 57, 0.35);
+}
+
+/* 🌿 Outline gradient button */
+.btn-outline-gradient {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--chamoisee);
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gradient:hover {
+  background: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--coffee);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(127, 85, 57, 0.35);
+}
+
+/* 🌸 Navbar dropdown links */
+.perfume-navbar .dropdown-item {
+  color: var(--coffee);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 8px 15px;
+}
+
+.perfume-navbar .dropdown-item:hover {
+  background: var(--almond);
+  color: var(--chamoisee);
+  transform: translateX(3px);
+  box-shadow: 0 3px 10px rgba(176, 137, 104, 0.2);
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: 1px solid var(--tan);
+  border-radius: 0.5rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background: var(--almond);
+  box-shadow: 0 3px 10px rgba(176, 137, 104, 0.2);
+}
+
+.navbar-toggler:hover i {
+  color: var(--chamoisee);
+  transform: rotate(10deg);
+  transition: all 0.3s ease;
+}
+
+/* 🌿 Responsive navbar adjustments */
+@media (max-width: 768px) {
+  .perfume-navbar {
+    padding: 10px 15px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .text-gradient {
+    font-size: 1.3rem;
+  }
+}
+
+/* Active page highlighting */
+/* Stronger active page highlighting */
+.active-link {
+  color: var(--chamoisee) !important; /* stronger, warm color */
+  font-weight: 700; /* bolder */
+  background: rgba(176, 137, 104, 0.25); /* slightly stronger subtle background */
+  border-radius: 6px;
+  padding: 5px 10px; /* add small padding for emphasis */
+  transition: all 0.3s ease;
+}
+
+.user-card {
+  background: #fdf7f0;
+  color: #7f5539;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #ddb892;
+  transition: all 0.2s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(176,137,104,0.3);
+}

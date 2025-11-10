@@ -1,0 +1,307 @@
+:root {
+  --almond: #ede0d4ff;
+  --dun: #e6ccb2ff;
+  --tan: #ddb892ff;
+  --chamoisee: #b08968ff;
+  --coffee: #7f5539ff;
+  --raw-umber: #9c6644ff;
+  --text-dark: #3b2f2fff;
+  --text-light: #ffffffcc;
+  --bg-light: #fdf7f0ff;
+  --btn-primary: #b08968ff;
+  --btn-primary-hover: #7f5539ff;
+}
+
+/* 🌸 Perfume Container Header */
+.perfume-container h2 {
+  color: var(--coffee);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+/* 🌿 Card container */
+.perfume-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--almond);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.perfume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌄 Image styling */
+.perfume-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--tan);
+}
+
+/* 🧩 Card body */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.card-body h5 {
+  font-weight: 600;
+  color: var(--coffee);
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: var(--raw-umber);
+  margin-bottom: 10px;
+}
+
+/* Gender & Price Info */
+.card-body .text-secondary {
+  color: var(--coffee);
+}
+
+/* Price */
+.card-body .text-primary {
+  color: var(--chamoisee);
+  font-weight: 600;
+}
+
+/* Buttons container */
+.card-body .d-flex {
+  margin-top: auto;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* 🌟 Premium Themed Buttons */
+.btn-outline-primary {
+  background: linear-gradient(
+    135deg,
+    var(--tan),
+    var(--chamoisee)
+  ); /* soft gradient */
+  color: var(--coffee);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(176, 137, 104, 0.3); /* subtle glow */
+}
+
+/* Hover effect for premium feel */
+.btn-outline-primary:hover {
+  background: linear-gradient(
+    135deg,
+    var(--chamoisee),
+    var(--tan)
+  ); /* reversed gradient */
+  color: var(--raw-umber);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(127, 85, 57, 0.35); /* stronger glow */
+}
+
+/* Optional: Focus effect for accessibility */
+.btn-outline-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.4);
+}
+
+/* Filters Section */
+.bg-light {
+  background: var(--bg-light);
+  border-radius: 1rem;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.bg-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+label.text-secondary {
+  color: var(--coffee);
+}
+
+/* 🏷 Badge Styling */
+.badge {
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  animation: pulse 1.8s infinite;
+  background: var(--chamoisee);
+  color: var(--text-light);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(176, 137, 104, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(176, 137, 104, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(176, 137, 104, 0);
+  }
+}
+
+/* ✨ New Launch Badge Styling */
+.new-launch-badge {
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  color: var(--text-dark);
+  font-weight: 600;
+  z-index: 10;
+  border: 2px solid var(--almond);
+  box-shadow: 0 4px 8px rgba(176, 137, 104, 0.3);
+  animation: pulse 1.8s infinite;
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* 🟢 Toast container */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: var(--text-light);
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.toast-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-container.success {
+  background-color: var(--chamoisee);
+}
+
+.toast-container.error {
+  background-color: #dc3545; /* keep red for error */
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .perfume-img {
+    height: 350px;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+  .perfume-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg-light {
+    padding: 10px;
+  }
+}
+
+/* 🌸 Filter Container */
+.perfume-container .d-flex.bg-light {
+  background: linear-gradient(135deg, var(--almond), var(--dun));
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(176, 137, 104, 0.2);
+  transition: all 0.3s ease;
+}
+
+.perfume-container .d-flex.bg-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(176, 137, 104, 0.25);
+}
+
+/* 🌿 Labels */
+.perfume-container label {
+  color: var(--coffee);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* 🌿 Select Dropdowns */
+.perfume-container select.form-select {
+  background: var(--chamoisee);
+  color: var(--almond);
+  border: 1px solid var(--tan);
+  border-radius: 10px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(176, 137, 104, 0.15);
+  transition: all 0.3s ease;
+}
+
+.perfume-container select.form-select:focus {
+  border-color: var(--coffee);
+  box-shadow: 0 0 5px rgba(176, 137, 104, 0.3);
+  outline: none;
+}
+
+/* 🌟 Latest Launch Checkbox */
+.perfume-container .form-check-input {
+  accent-color: var(--tan);
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(176, 137, 104, 0.15);
+}
+
+.perfume-container .form-check-input:checked {
+  background: var(--chamoisee);
+  border-color: var(--coffee);
+}
+
+.perfume-container .form-check-label {
+  color: var(--coffee);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* 🌿 Filter Icons */
+.perfume-container i.bi {
+  color: var(--coffee);
+}
+
+/* 🌿 Themed price text */
+.text-theme-price {
+  color: var(--chamoisee);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.text-theme-price:hover {
+  transform: scale(1.05);
+  color: var(--coffee);
+}

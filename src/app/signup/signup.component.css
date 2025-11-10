@@ -1,0 +1,135 @@
+/* 🌸 Signup Card */
+.signup-card {
+  background: linear-gradient(135deg, var(--almond), var(--dun));
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px 25px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* 🌿 Gradient Text Headings */
+.text-gradient {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+.form-control {
+  border: 1px solid var(--tan);
+  border-radius: 0.5rem;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  background: var(--bg-light);
+}
+
+.form-control:focus {
+  border-color: var(--coffee);
+  box-shadow: 0 0 8px rgba(127, 85, 57, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--tan), var(--chamoisee));
+  color: var(--coffee);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(176, 137, 104, 0.3);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  color: var(--raw-umber);
+  box-shadow: 0 6px 18px rgba(127, 85, 57, 0.35);
+}
+
+/* Links with hover gradient */
+.text-gradient-hover {
+  color: var(--coffee);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.text-gradient-hover:hover {
+  background: linear-gradient(135deg, var(--chamoisee), var(--tan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle or helper text */
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--raw-umber);
+  margin-top: 15px;
+}
+
+/* Error messages */
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Toast messages */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  color: var(--text-light);
+}
+
+.toast-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-container.success {
+  background-color: var(--chamoisee);
+}
+
+.toast-container.error {
+  background-color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .signup-card {
+    padding: 20px 15px;
+  }
+
+  .btn-gradient {
+    width: 100%;
+  }
+
+  .text-gradient {
+    font-size: 1.5rem;
+  }
+}
